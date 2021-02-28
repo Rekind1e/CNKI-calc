@@ -13,8 +13,6 @@ def run(in_path, out_path, filename):
   with open(os.path.join(in_path, filename) + '.txt', 'r', encoding='utf-8') as f:
     lines = f.readlines()
     _id = None
-    #if len(lines) < 50:
-    #  return
     author_cnt, org_cnt = defaultdict(Counter), defaultdict(Counter)
     for line in lines:
       _, info, authors, orgs, *_ = line.split('&&')
