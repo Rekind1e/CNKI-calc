@@ -5,7 +5,7 @@ import json
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--input', type=str, default='inputs', help='input directory')
-parser.add_argument('--output', type=str, default='output_lda', help='output directory')
+parser.add_argument('--output', type=str, default='output', help='output directory')
 args = parser.parse_args()
 
 
