@@ -15,6 +15,7 @@ def run(in_path, out_path, filename):
     _id = None
     author_cnt, org_cnt = defaultdict(Counter), defaultdict(Counter)
     for line in lines:
+      if len(line.split('&&')) < 4: continue
       _, info, authors, orgs, *_ = line.split('&&')
       year = info[-9:-5]
       if _id is None:
