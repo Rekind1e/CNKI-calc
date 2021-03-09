@@ -16,6 +16,8 @@ with open(os.path.join(args.output, 'orgs.txt'), 'w', encoding='utf-8') as out:
         _, _, _, orgs, *_ = line.split('&&')
         if not orgs: continue
         for org in orgs.split(';'):
+          if org == 'Japan:':
+            print(line)
           if org not in cnt:
             cnt.add(org)
-            out.write(f'{org}\n')
+            # out.write(f'{org}\n')
